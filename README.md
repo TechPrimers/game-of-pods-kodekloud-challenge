@@ -1,10 +1,14 @@
 # Game of Pods KodeKloud Challenge
 KodeKloud's [Game of Pods](https://kodekloud.com/p/game-of-pods) Challenge
 
+# Table of Contents
+- [Map](#map)
+- [Challenges with Solution](#challenges-with-solution)
+
 ## Map
 ![Game of Pods Map](/map.png)
 
-## Challenges
+## Challenges with Solution
 Challenge | Name | Solution YML files | Explanation Video |
 --------- | ---- | ------------------ | ----------------- |
 Production Clusters | Voting Application | | |
