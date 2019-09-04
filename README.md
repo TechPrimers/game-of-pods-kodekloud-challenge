@@ -11,7 +11,7 @@ KodeKloud's [Game of Pods](https://kodekloud.com/p/game-of-pods) Challenge
 ## Challenges with Solution
 Challenge | Name | Solution YML files | Explanation Video |
 --------- | ---- | ------------------ | ----------------- |
-Production Clusters | Voting Application | | |
+Production Clusters | Voting Application |[Github](./solutions/voting-application) | [Youtube](https://www.youtube.com/watch?v=yuB_yJIVkSc)|
 Tyro | Jekyll | | |
 Pento | Fix Game of Pod Cluster | | |
 Bravo | Drupal | | |
