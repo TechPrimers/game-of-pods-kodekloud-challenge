@@ -8,4 +8,4 @@ spec:
       targetPort: 6379
       name: http
   selector:
-    name: redis-deployment
+    app: redis-deployment
