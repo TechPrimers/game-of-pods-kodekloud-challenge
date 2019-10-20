@@ -8,9 +8,9 @@ metadata:
 spec:
   ports:
   - name: "30095"
-    port: 30095
+    nodePort: 30095
     protocol: TCP
-    targetPort: 30095
+    port: 3095
   selector:
     app: drupal-service
   type: NodePort
