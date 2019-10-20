@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: drupal-service
+  name: drupal-service
+spec:
+  ports:
+  - name: "30095"
+    port: 30095
+    protocol: TCP
+    targetPort: 30095
+  selector:
+    app: drupal-service
+  type: NodePort
+status:
+  loadBalancer: {}

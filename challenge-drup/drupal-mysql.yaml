@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: drupal-mysql
+    version: v1
   name: drupal-mysql
 spec:
   replicas: 1

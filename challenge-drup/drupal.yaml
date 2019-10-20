@@ -19,7 +19,8 @@ spec:
     spec:
       initContainers:
       - name: init-sites-volume
-        command: [ "/bin/bash", "-c", "cp -r /var/www/html/sites/ /data/; chown www-data:www-data /data/ -R"]
+        command: [ "/bin/bash", "-c"]
+        args: [ 'cp -r /var/www/html/sites/ /data/; chown www-data:www-data /data/ -R' ]
         image: drupal:8.6
         volumeMounts:
         - mountPath: "/data"
