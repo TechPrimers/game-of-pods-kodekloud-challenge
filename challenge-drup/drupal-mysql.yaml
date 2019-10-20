@@ -4,7 +4,6 @@ metadata:
   creationTimestamp: null
   labels:
     app: drupal-mysql
-    version: v1
   name: drupal-mysql
 spec:
   replicas: 1
@@ -22,9 +21,22 @@ spec:
       - image: mysql:5.7
         name: mysql
         resources: {}
-        envFrom:
-        - secretRef:
-            name: drupal-mysql-secret
+        env:
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: drupal-mysql-secret
+              key: MYSQL_DATABASE
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: drupal-mysql-secret
+              key: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: drupal-mysql-secret
+              key: MYSQL_USER
         volumeMounts:
         - mountPath: "/var/lib/mysql"
           name: pvc
