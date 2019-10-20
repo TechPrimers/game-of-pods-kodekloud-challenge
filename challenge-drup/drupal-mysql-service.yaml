@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     targetPort: 3306
   selector:
-    app: drupal-mysql-service
+    app: drupal-mysql
   type: ClusterIP
 status:
   loadBalancer: {}

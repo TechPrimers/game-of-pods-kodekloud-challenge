@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     port: 3095
   selector:
-    app: drupal-service
+    app: drupal
   type: NodePort
 status:
   loadBalancer: {}
