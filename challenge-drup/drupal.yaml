@@ -17,17 +17,17 @@ spec:
       labels:
         app: drupal
     spec:
+      initContainers:
+      - name: init-sites-volume
+        command: [ "/bin/bash", "-c", "cp -r /var/www/html/sites/ /data/; chown www-data:www-data /data/ -R"]
+        image: drupal:8.6
+        volumeMounts:
+        - mountPath: "/data"
+          name: pvc
       containers:
       - image: drupal:8.6
         name: drupal
         resources: {}
-        initContainers:
-        - name: init-sites-volume
-          image: drupal:8.6
-          command: [ "/bin/bash", "-c", "cp -r /var/www/html/sites/ /data/; chown www-data:www-data /data/ -R"]
-          volumeMounts:
-          - mountPath: "/data"
-            name: drupal-pvc
         volumeMounts:
         - mountPath: "/var/www/html/modules"
           name: pvc
